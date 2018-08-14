@@ -16,13 +16,13 @@ export function activate(context: vscode.ExtensionContext) {
         switch (path.parse(currentFile).ext) {
             case '.cpp': {
                 VSCodeUI.runInTerminal('g++ -std=c++17 -Wall -Wextra ' + "'" + currentFile + "'" + ' -o ' + "'" + outputFile + "'");
-                VSCodeUI.runInTerminal("clear");
+                // VSCodeUI.runInTerminal("clear");
                 VSCodeUI.runInTerminal("'" + outputFile + "'");
                 break;
             }
             case '.c': {
                 VSCodeUI.runInTerminal('gcc -Wall -Wextra ' + "'" + currentFile + "'" + ' -o ' + "'" + outputFile + "'");
-                VSCodeUI.runInTerminal("clear");
+                // VSCodeUI.runInTerminal("clear");
                 VSCodeUI.runInTerminal("'" + outputFile + "'");
                 break;
             }
